@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mypocketcurio.app/sitemap-index.xml

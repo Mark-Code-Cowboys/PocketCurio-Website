@@ -1,0 +1,555 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import Souvenir from '../components/Souvenir.astro';
+
+const kinds = [
+  { kind: 'keychain', label: 'Keychains' },
+  { kind: 'magnet', label: 'Magnets' },
+  { kind: 'spoon', label: 'Spoons' },
+  { kind: 'shotGlass', label: 'Shot glasses' },
+  { kind: 'patch', label: 'Patches' },
+  { kind: 'pin', label: 'Pins' },
+  { kind: 'ornament', label: 'Ornaments' },
+  { kind: 'sticker', label: 'Stickers' },
+  { kind: 'postcard', label: 'Postcards' },
+  { kind: 'other', label: 'Something else' },
+] as const;
+---
+
+<Base>
+  <Nav />
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Coming soon · Android first, iPhone to follow</div>
+      <h1>A souvenir is<br>a place <em>+</em> a memory.</h1>
+      <p>Pocket Curio is the shelf you can carry. Photograph each keychain, fridge magnet, spoon, or shot glass, name where it's from, and keep the story that came home with it — who gave it to you, the trip, the day. Then watch the map fill in.</p>
+      <div class="hero-ctas">
+        <span class="btn-store btn-store-soon">
+          <i class="ti ti-brand-google-play"></i>
+          Google Play — coming soon
+        </span>
+        <a href="mailto:hello@code-cowboys.com?subject=Tell%20me%20when%20Pocket%20Curio%20launches" class="btn-store">
+          <i class="ti ti-mail"></i>
+          Tell me when it launches
+        </a>
+      </div>
+      <div class="hero-privacy">
+        <i class="ti ti-lock"></i>
+        No account · No cloud · Your photos never leave your phone
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="/shots/00-fridge-magnets.webp" alt="Pocket Curio collection grid: twenty real fridge magnets — Mount Rushmore, Köln, Traverse City, San Francisco — each tile labelled with its place" class="phone-shot hero-phone" width="540" height="1200" />
+      <div class="float float-1"><Souvenir kind="keychain" size={84} /></div>
+      <div class="float float-2"><Souvenir kind="magnet" size={76} /></div>
+      <div class="float float-3"><Souvenir kind="spoon" size={80} /></div>
+      <div class="float float-4"><Souvenir kind="shotGlass" size={68} /></div>
+    </div>
+  </section>
+
+  <!-- KINDS -->
+  <section class="kinds-section">
+    <div class="inner">
+      <div class="section-label">What's on your shelf?</div>
+      <h2>Every kind of keepsake<br>gets its own shelf</h2>
+      <p class="section-sub">Pick the kind when you start a collection and the app talks your language — "Add magnet", "Photograph your first spoon". Collecting something we didn't think of? Name it yourself.</p>
+      <div class="kinds-row">
+        {kinds.map(k => (
+          <div class="kind">
+            <Souvenir kind={k.kind} size={56} />
+            <span>{k.label}</span>
+          </div>
+        ))}
+      </div>
+      <p class="kinds-note">Not an inventory app. No barcodes, no value estimates, no marketplace. A souvenir isn't stock — it's the place you stood.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how">
+    <div class="inner">
+      <div class="section-label">How it works</div>
+      <h2>Photo, place, done.<br>Under ten seconds.</h2>
+      <p class="section-sub">The camera opens the moment you add a souvenir. Take the shot, check the place name the app read off the print, save. The memory can come later, when it comes back to you.</p>
+      <div class="steps-row">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Photograph it</h3>
+          <p>Camera first: open the app, add a souvenir, and the viewfinder is already up. Crop it if you like, or pick a shot from your library. The photo is the souvenir's face everywhere in the app.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Name the place</h3>
+          <p>Pocket Curio reads the text printed on the souvenir — right on your phone — and fills in the place for you to check. "KEY WEST" lands in the field before you've typed a letter; anything else it read is one tap away.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Keep the memory</h3>
+          <p>When you're ready, add the date, the trip or occasion, who gave it to you, a rating, and the story. Then open the <strong>Map</strong> and watch the states and countries light up, one place at a time.</p>
+        </div>
+      </div>
+      <div class="shot-row">
+        <figure>
+          <img src="/shots/05-composer.webp" alt="New souvenir screen with a Key West magnet photo and the Place field prefilled from the photo" class="phone-shot" width="540" height="1200" loading="lazy" />
+          <figcaption>Photo landed, place read off the print — "check the spelling" and save.</figcaption>
+        </figure>
+        <figure>
+          <img src="/shots/04-memory.webp" alt="Souvenir detail: Yellowstone magnet, five stars, July 3 2016, Fortieth anniversary, and a memory about Old Faithful" class="phone-shot" width="540" height="1200" loading="lazy" />
+          <figcaption>Who gave it to you. The trip. The day. Five stars for Old Faithful.</figcaption>
+        </figure>
+        <figure>
+          <img src="/shots/02-map.webp" alt="The map screen: continents and US states filled in violet where souvenirs came from, with country counts" class="phone-shot" width="540" height="1200" loading="lazy" />
+          <figcaption>Thirteen states, four countries, two continents — and counting.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features-section" id="features">
+    <div class="inner">
+      <div class="section-label">Features</div>
+      <h2>Built for the shelf,<br>the fridge, and the shoebox</h2>
+      <p class="section-sub">Not a catalog, not a marketplace — a private journal for the keepsakes you actually own, and the places and people behind them.</p>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon"><i class="ti ti-camera"></i></div>
+          <h3>Camera first</h3>
+          <p>Adding a souvenir opens straight into the camera. Take the photo, type or confirm the place, save — the whole first step takes under ten seconds.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="ti ti-text-recognition"></i></div>
+          <h3>Reads the print</h3>
+          <p>On-device text recognition reads what's printed on the souvenir and offers it as the place name. You check the spelling; the photo never leaves your phone.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="ti ti-fridge"></i></div>
+          <h3>Whole-fridge batch scan</h3>
+          <p>Already have a fridge full? One photo of the whole door, box each magnet with your finger, and every box becomes its own souvenir with its place read off it. Forty magnets in a few minutes.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="ti ti-layout-grid"></i></div>
+          <h3>Grids that look like the real thing</h3>
+          <p>Each collection is a photo grid you can sort by date or by place — as close to standing in front of the shelf as a phone gets.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="ti ti-users"></i></div>
+          <h3>One phone, everyone's shelf</h3>
+          <p>The keychain collector and the fridge-magnet collector in the same house each get their own collection, each named the way they'd say it: "Dad's keychains", "Mom's fridge".</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="ti ti-book"></i></div>
+          <h3>The memory, not just the object</h3>
+          <p>Date, trip or occasion, who it was from, a five-star rating, and the story in your own words. The fields are optional; the story is the point.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="ti ti-world"></i></div>
+          <h3>The map <span class="feature-tag">Pro</span></h3>
+          <p>Every state, province, and country your souvenirs came from, lit up one place at a time, with continent and country counts. Souvenirs by year, and the oldest one you own.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="ti ti-file-export"></i></div>
+          <h3>Backup & CSV export <span class="feature-tag">Pro</span></h3>
+          <p>A full backup file with every photo, restorable on any phone, and a CSV of the collection for your spreadsheet. Both go out through your phone's share sheet — wherever you send them.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="ti ti-device-mobile"></i></div>
+          <h3>Private by construction</h3>
+          <p>No account, no cloud, no analytics, and no location permission. Pocket Curio makes no network calls at all — the map is drawn from the places you type.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-section" id="pricing">
+    <div class="inner">
+      <div class="section-label">Pricing</div>
+      <h2>Free to start.<br>One purchase for the whole shelf.</h2>
+      <p class="section-sub">Your first collection and your first 25 souvenirs are free forever, and the app always shows where you stand. Pocket Curio Pro is one purchase — it makes a good gift for the collector in your life — or month to month.</p>
+      <div class="pricing-cards">
+        <div class="price-card">
+          <h3>Free</h3>
+          <div class="price">$0</div>
+          <ul>
+            <li><i class="ti ti-circle-check"></i>1 collection, 25 souvenirs</li>
+            <li><i class="ti ti-circle-check"></i>Photos, places & memories included</li>
+            <li><i class="ti ti-circle-check"></i>Reads the print, batch shelf scan</li>
+            <li><i class="ti ti-circle-check"></i>No ads, no tracking</li>
+          </ul>
+        </div>
+        <div class="price-card price-card-featured">
+          <h3>Pro — Forever</h3>
+          <div class="price">$6.99 <span class="price-term">one-time</span></div>
+          <ul>
+            <li><i class="ti ti-circle-check"></i>Unlimited collections & souvenirs</li>
+            <li><i class="ti ti-circle-check"></i>The map — states, countries, by year</li>
+            <li><i class="ti ti-circle-check"></i>Full backup & CSV export</li>
+            <li><i class="ti ti-circle-check"></i>Pay once, keep it forever. Makes a good gift.</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Pro — Monthly</h3>
+          <div class="price">$1.49 <span class="price-term">/ month</span></div>
+          <ul>
+            <li><i class="ti ti-circle-check"></i>Everything in Pro</li>
+            <li><i class="ti ti-circle-check"></i>Cancel any time through the store</li>
+            <li><i class="ti ti-circle-check"></i>Processed by Google Play / the App Store</li>
+          </ul>
+        </div>
+      </div>
+      <p class="pricing-note">Nothing you've photographed is ever locked away: viewing, editing, and adding to your first collection stay free forever — only the <em>second</em> collection or the <em>26th</em> souvenir asks for Pro. Prices shown in USD; the store shows your local price.</p>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <div class="privacy-wrap" id="privacy">
+    <div class="privacy-inner inner">
+      <div class="privacy-icon"><i class="ti ti-lock"></i></div>
+      <div class="section-label">Privacy</div>
+      <h2>The shelf is yours.<br>We never see it.</h2>
+      <p>Where you've travelled, who gave you what, and the memories you wrote down are nobody's business but yours. Pocket Curio keeps all of it on your device — the app has no accounts, no analytics, and makes no network calls. There is nowhere to upload your photos to, because we didn't build one.</p>
+      <div class="privacy-points">
+        <div class="privacy-point"><i class="ti ti-circle-check"></i><span>No account required, ever</span></div>
+        <div class="privacy-point"><i class="ti ti-circle-check"></i><span>No network calls — works fully offline, including reading the print on a souvenir</span></div>
+        <div class="privacy-point"><i class="ti ti-circle-check"></i><span>No location permission — the map is drawn from the places you type</span></div>
+        <div class="privacy-point"><i class="ti ti-circle-check"></i><span>No analytics, advertising, or tracking SDKs</span></div>
+        <div class="privacy-point"><i class="ti ti-circle-check"></i><span>Export and backup go only where you send them, through your phone's share sheet</span></div>
+        <div class="privacy-point"><i class="ti ti-circle-check"></i><span>Purchases handled by the store — we keep no purchase records of our own</span></div>
+      </div>
+      <a href="/privacy/" class="btn-outline">Read our Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="inner">
+      <div class="section-label">About</div>
+      <h2>From the Code Cowboys<br>workshop</h2>
+      <div class="about-grid">
+        <div>
+          <p>Pocket Curio is built by <a href="https://code-cowboys.com"><strong>Code Cowboys LLC</strong></a>, a Michigan-based software studio making practical, well-engineered apps for underserved niches — privacy-first, on-device, no accounts.</p>
+          <p>It's the third app from the studio, alongside <a href="https://tableencore.app"><strong>Table Encore</strong></a>, a personal restaurant meal journal, and <a href="https://traceelements.app"><strong>Trace Elements</strong></a>, a dietary sensitivity tracker — all built on the same promise: your data stays on your device.</p>
+          <div class="about-links">
+            <a href="https://code-cowboys.com" class="btn-outline">Visit code-cowboys.com</a>
+            <a href="https://code-cowboys.com/#apps" class="about-more">More apps from the studio <i class="ti ti-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">🤠</div>
+          <h3>Michigan-built. Developer-led.</h3>
+          <p>No support ticket system, no chatbot — email goes straight to the developers building the software.</p>
+          <a href="mailto:hello@code-cowboys.com">hello@code-cowboys.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section inner">
+    <div class="cta-souvenirs" aria-hidden="true">
+      <Souvenir kind="pin" size={44} />
+      <Souvenir kind="patch" size={44} />
+      <Souvenir kind="ornament" size={44} />
+      <Souvenir kind="postcard" size={44} />
+      <Souvenir kind="sticker" size={44} />
+    </div>
+    <h2>Photograph the shelf.<br>Watch the map fill in.</h2>
+    <p>Pocket Curio is heading to Google Play first, with the App Store to follow. Drop us a line and we'll tell you the day it lands.</p>
+    <div class="cta-btns">
+      <span class="btn-store btn-store-soon">
+        <i class="ti ti-brand-google-play"></i>
+        Google Play — coming soon
+      </span>
+      <span class="btn-store btn-store-soon">
+        <i class="ti ti-brand-apple"></i>
+        App Store — to follow
+      </span>
+      <a href="mailto:hello@code-cowboys.com?subject=Tell%20me%20when%20Pocket%20Curio%20launches" class="btn-store">
+        <i class="ti ti-mail"></i>
+        Tell me when it launches
+      </a>
+    </div>
+    <p class="cta-sub">Made by <a href="https://code-cowboys.com">Code Cowboys LLC</a> · Michigan</p>
+  </section>
+
+  <Footer />
+</Base>
+
+<style>
+  .hero {
+    padding: 70px 40px;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 60px;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--curio);
+    border: 1px solid var(--curio-dim);
+    background: var(--curio-faint);
+    padding: 5px 14px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+  .hero h1 em { color: var(--curio); font-style: italic; }
+
+  .hero p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    font-weight: 300;
+    max-width: 480px;
+  }
+
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+
+  .hero-privacy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  .hero-privacy i { color: var(--curio); font-size: 15px; }
+
+  .hero-visual { position: relative; display: flex; justify-content: center; padding: 30px 0; }
+  .hero-phone { max-width: 250px; }
+
+  /* Souvenirs pinned around the phone like magnets on a door. */
+  .float {
+    position: absolute;
+    background: #fff;
+    border-radius: 18px;
+    padding: 8px;
+    box-shadow: 0 10px 28px rgba(97,57,95,0.18);
+    border: 1px solid var(--border);
+    display: flex;
+    line-height: 0;
+  }
+  .float-1 { top: 10px; left: 0; transform: rotate(-9deg); }
+  .float-2 { top: 42%; right: -6px; transform: rotate(7deg); }
+  .float-3 { bottom: 20px; left: 4px; transform: rotate(6deg); }
+  .float-4 { top: 6px; right: 6px; transform: rotate(-6deg); }
+
+  .kinds-section { padding: 70px 0; border-top: 1px solid var(--border); background: var(--bg2); }
+  .kinds-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .kind {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(80,40,80,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .kind:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(97,57,95,0.14); }
+  .kind span { font-size: 13px; font-weight: 500; color: var(--text-muted); text-align: center; }
+  .kinds-note { font-size: 14px; color: var(--text-dim); font-weight: 300; max-width: 560px; }
+
+  .how-section { padding: 70px 0; border-top: 1px solid var(--border); }
+
+  .steps-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 50px;
+  }
+  .step-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--curio);
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+  .step h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  .step p { font-size: 13px; color: var(--text-dim); line-height: 1.65; font-weight: 300; }
+  .step strong { color: var(--curio-deep); font-weight: 600; }
+
+  .shot-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    justify-items: center;
+  }
+  .shot-row figure { margin: 0; text-align: center; max-width: 250px; }
+  .shot-row figcaption {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  .features-section { padding: 70px 0; border-top: 1px solid var(--border); }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .feature { background: var(--bg2); padding: 30px 28px; }
+  .feature-icon { font-size: 26px; color: var(--curio); margin-bottom: 14px; }
+  .feature h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  .feature-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--curio);
+    border: 1px solid var(--curio-dim);
+    background: var(--curio-faint);
+    border-radius: 3px;
+    padding: 2px 7px;
+    margin-left: 6px;
+    vertical-align: 2px;
+  }
+  .feature p { font-size: 13px; color: var(--text-dim); line-height: 1.65; font-weight: 300; }
+
+  .pricing-section { padding: 70px 0; border-top: 1px solid var(--border); }
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 320px));
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  .price-term {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-dim);
+  }
+  .price-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(80,40,80,0.06);
+  }
+  .price-card-featured { border-color: var(--curio-dim); box-shadow: 0 8px 28px rgba(97,57,95,0.14); }
+  .price-card h3 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 6px; }
+  .price {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--curio-deep);
+    margin-bottom: 18px;
+  }
+  .price-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .price-card li { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--text-dim); }
+  .price-card li i { color: var(--good); font-size: 17px; flex-shrink: 0; }
+  .pricing-note { font-size: 13px; color: var(--text-dim); font-weight: 300; max-width: 560px; }
+  .pricing-note em { color: var(--curio-deep); font-style: normal; font-weight: 500; }
+
+  .privacy-wrap {
+    background: var(--bg3);
+    padding: 70px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .privacy-inner { max-width: 620px; }
+  .privacy-icon { font-size: 32px; color: var(--curio); margin-bottom: 20px; }
+  .privacy-inner p { font-size: 15px; color: var(--text-dim); line-height: 1.7; font-weight: 300; margin-bottom: 28px; }
+  .privacy-points { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+  .privacy-point { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-muted); }
+  .privacy-point i { color: var(--good); font-size: 18px; flex-shrink: 0; }
+
+  .about-section { padding: 70px 0; border-top: 1px solid var(--border); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 48px;
+    align-items: start;
+  }
+  .about-grid p { font-size: 15px; color: var(--text-dim); line-height: 1.7; font-weight: 300; margin-bottom: 16px; max-width: 480px; }
+  .about-grid p a { color: var(--curio); }
+  .about-grid p strong { font-weight: 600; }
+  .about-links { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 24px; }
+  .about-more { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; color: var(--curio); }
+  .about-more:hover { color: var(--curio-deep); }
+  .about-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(80,40,80,0.06);
+  }
+  .about-icon { font-size: 30px; margin-bottom: 12px; }
+  .about-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  .about-card p { font-size: 13px; color: var(--text-dim); line-height: 1.65; font-weight: 300; margin-bottom: 14px; }
+  .about-card a { font-size: 14px; color: var(--curio); font-weight: 500; }
+
+  .cta-section { padding: 70px 40px; text-align: center; }
+  .cta-souvenirs { display: flex; justify-content: center; gap: 14px; margin-bottom: 22px; }
+  .cta-souvenirs :global(svg) { opacity: 0.9; }
+  .cta-section h2 { margin-bottom: 12px; }
+  .cta-section p { font-size: 15px; color: var(--text-dim); margin-bottom: 32px; font-weight: 300; }
+  .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+  .cta-sub { font-size: 12px; color: var(--text-faint); margin: 0; }
+  .cta-sub a { color: var(--curio); }
+
+  @media (max-width: 768px) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 36px; }
+    .hero p { max-width: 100%; }
+    .hero-ctas { justify-content: center; }
+    .hero-privacy { justify-content: center; text-align: center; }
+    .hero-visual { order: -1; margin-bottom: 10px; padding: 20px 30px; }
+    .hero-phone { max-width: 220px; }
+    .float { padding: 5px; border-radius: 12px; }
+    .float :global(svg) { width: 54px; height: 54px; }
+    .float-1 { left: 0; top: 0; }
+    .float-2 { right: 0; }
+    .float-3 { left: 6px; bottom: 10px; }
+    .float-4 { right: 4px; top: 0; }
+
+    .kinds-section, .how-section, .features-section, .pricing-section, .privacy-wrap, .about-section { padding: 50px 0; }
+    .kinds-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .about-grid { grid-template-columns: 1fr; gap: 28px; }
+    .steps-row { grid-template-columns: 1fr; gap: 24px; }
+    .shot-row { grid-template-columns: 1fr; gap: 28px; }
+    .shot-row figure { max-width: 240px; }
+    .features-grid { grid-template-columns: 1fr; }
+    .pricing-cards { grid-template-columns: 1fr; }
+    .cta-section { padding: 50px 20px; }
+  }
+</style>

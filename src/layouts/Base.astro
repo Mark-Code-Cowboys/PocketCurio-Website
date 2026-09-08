@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = 'Pocket Curio — A souvenir is a place + a memory',
+  description = 'Pocket Curio is a private souvenir collection journal for keychains, fridge magnets, spoons, shot glasses, patches, pins, and more. Photograph the shelf, name the place, keep the memory, and watch the map fill in. No account, no cloud — everything stays on your phone.',
+  noindex = false
+} = Astro.props;
+
+// Canonical URL — normalized to the trailing-slash form the site is served at,
+// so Google indexes one URL per page.
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonicalURL} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#7a4e7e" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pocket Curio" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={new URL('/images/og-feature.png', Astro.site).href} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

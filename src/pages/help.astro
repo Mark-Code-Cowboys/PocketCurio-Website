@@ -1,0 +1,128 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/docs.css';
+---
+
+<Base title="Help & Troubleshooting — Pocket Curio" description="Troubleshooting for Pocket Curio: camera and photos, reading the print, the shelf scan, the map, purchases, backups, moving to a new phone, and contacting support.">
+  <Nav />
+
+  <article class="doc">
+    <div class="doc-header">
+      <div class="section-label">Documentation</div>
+      <h1>Help & Troubleshooting</h1>
+      <p class="lead">Quick fixes for common situations. If something here doesn't solve it, see <a href="#contact">contact & support</a> at the bottom.</p>
+    </div>
+
+    <div class="toc">
+      <p>On this page</p>
+      <ul>
+        <li><a href="#camera">Camera & photos</a></li>
+        <li><a href="#reading">Reading the print</a></li>
+        <li><a href="#scan">Scanning a shelf</a></li>
+        <li><a href="#map">The map</a></li>
+        <li><a href="#purchases">Purchases & the free limit</a></li>
+        <li><a href="#data">Backups, new phones & data</a></li>
+        <li><a href="#contact">Contact & support</a></li>
+      </ul>
+    </div>
+
+    <h2 id="camera">Camera & photos</h2>
+
+    <h3>The camera doesn't open when I add a souvenir</h3>
+    <ul>
+      <li>Check that Pocket Curio has camera permission: Settings → Apps → Pocket Curio → Permissions → Camera.</li>
+      <li>If you declined it, <strong>Choose from library</strong> still works — you just pick an existing photo instead.</li>
+    </ul>
+
+    <h3>I saved without a photo</h3>
+    <p>You can't — the photo <em>is</em> the record, so the composer asks for one first ("Take a photo first — that's the record"). Take it or choose one from the library, then save.</p>
+
+    <h3>The photo is sideways, dark, or has too much background</h3>
+    <p>Tap <strong>Retake</strong>, or <strong>Crop</strong> to tighten the frame on the souvenir. Cropping also helps the app read the print: less background, fewer stray words.</p>
+
+    <h3>A photo disappeared</h3>
+    <p>Photos live inside the app's own storage, so they survive updates but are removed with their souvenir — and by "Clear data" or uninstalling. If a souvenir is there but its photo isn't, edit it and take or choose a new one.</p>
+
+    <h2 id="reading">Reading the print</h2>
+
+    <h3>The place came out wrong or empty</h3>
+    <ul>
+      <li>Check the <strong>Also read</strong> chips under the field — the right line is often the second one it found.</li>
+      <li>Fill the frame and avoid glare: shiny magnets and curved glass are the usual culprits. Crop tight.</li>
+      <li>Handwritten text, heavily stylized lettering, and non-Latin scripts aren't supported by the on-device recognizer. Just type the place — it's a plain text field.</li>
+    </ul>
+
+    <h3>It read the text but I typed something else, and now the note is gone</h3>
+    <p>That's expected: start typing and the "Read from the photo" note clears because your spelling wins. The chips stay if you want to go back to one.</p>
+
+    <h2 id="scan">Scanning a shelf</h2>
+
+    <h3>My boxes don't land where I touch</h3>
+    <p>Drag from one corner of the souvenir to the opposite corner. Tap a box to remove it and draw again. For a very tall fridge, take two photos — top half and bottom half — and scan each; small, distant magnets are hard for the reader.</p>
+
+    <h3>Some crops didn't get a place name</h3>
+    <p>The review grid (<em>Check what was read</em>) says how many couldn't be read — "2 couldn't be read — type those in." Type the place on those crops (or untick them) and the add button lights up; every kept crop needs a place before anything is saved.</p>
+
+    <h3>The scan stopped at "Room for 3 more"</h3>
+    <p>The free tier holds 25 souvenirs, and a scan that would go past it says so before adding anything ("24 of 25 free items used — 3 more won't fit"). Buy Pro from the sheet and the add completes, or box fewer souvenirs.</p>
+
+    <h3>I backed out halfway — did it save anything?</h3>
+    <p>No. Leaving the scan at any step before the final add leaves no souvenirs and no stray photos.</p>
+
+    <h2 id="map">The map</h2>
+
+    <h3>A state or country isn't lighting up</h3>
+    <ul>
+      <li>The map reads the <strong>State</strong> and <strong>Country</strong> fields under <em>Add the memory</em> — not the Place field. "Yellowstone" alone doesn't know it's in Wyoming; add WY and US.</li>
+      <li>Abbreviations and casual spellings are understood ("FL", "usa", "England"). A country the app doesn't recognize still counts in the country chips, just without a continent.</li>
+    </ul>
+
+    <h3>The map shows a Pro prompt</h3>
+    <p>That's expected: the map is part of Pocket Curio Pro. <strong>Restore a backup</strong> stays available on that screen without Pro. If you <em>do</em> have Pro and still see the prompt, make sure you're signed into the store account that made the purchase, then tap <strong>Restore purchase</strong> on the Pro sheet.</p>
+
+    <h3>"Souvenirs by year" is missing some</h3>
+    <p>Only souvenirs with a date are counted there; the screen tells you how many are undated. Add a <strong>When</strong> date to each one and they'll appear.</p>
+
+    <h2 id="purchases">Purchases & the free limit</h2>
+
+    <h3>I hit the free limit — what exactly is limited?</h3>
+    <p>Only <em>adding more</em>: a second collection, or a 26th souvenir. Your first collection and every souvenir in it stay yours to view and edit forever. The tally counts what you've ever added, so deleting a souvenir doesn't hand the slot back.</p>
+
+    <h3>My Pro purchase didn't restore after reinstalling</h3>
+    <ul>
+      <li>Make sure you're signed into the <strong>same store account</strong> that made the purchase (Google account on Android, Apple Account on iPhone).</li>
+      <li>Open the app once while online so the store can report the purchase, then tap <strong>Restore purchase</strong> on the Pro sheet.</li>
+      <li>Still missing? Check Google Play → Payments & subscriptions (or Settings → Apple Account → Subscriptions on iPhone) to confirm the purchase, then email us (below) with the order number.</li>
+    </ul>
+
+    <h3>Do I need both the one-time purchase and the subscription?</h3>
+    <p>No — they're two ways to get the same Pro. Buy one. If you subscribed monthly and later want to stop paying, cancel through the store; the free tier keeps everything you've added viewable.</p>
+
+    <h2 id="data">Backups, new phones & data</h2>
+
+    <h3>How do I move my collection to a new phone?</h3>
+    <p>On the old phone: Map tab → <strong>Back up everything</strong> (Pro) and share the file somewhere you can reach from the new phone — your cloud drive, an email to yourself. On the new phone: install the app, Map tab → <strong>Restore a backup</strong>, pick the file. Restore doesn't need Pro. Your device's own backup (Google Backup with app data, iCloud Backup) can also carry the app across.</p>
+    <div class="warn">
+      <strong>Uninstalling deletes your collection</strong>
+      <p>Removing the app removes its data and photos. If you're troubleshooting by reinstalling, make a backup first — we have no copy to restore for you. That's the point of the privacy design, but it means the backup is in your hands.</p>
+    </div>
+
+    <h3>Restore replaced things I'd added since</h3>
+    <p>Restore replaces <em>everything</em> on the phone with the backup, after a confirmation — it doesn't merge. Anything added after the backup was made is gone; re-add it from the photos on your phone if you still have them. Back up again after big additions.</p>
+
+    <h3>Will an app update erase my data?</h3>
+    <p>No — normal updates preserve your collection. Data is only removed by uninstalling the app or clearing its storage.</p>
+
+    <h2 id="contact">Contact & support</h2>
+    <p>If you've worked through the relevant section above and still need help:</p>
+    <ul>
+      <li>Re-read the <a href="/user-guide/">User Guide</a> for the screen you're on.</li>
+      <li>Check the <a href="/faq/">FAQ</a> for how privacy, pricing, and platforms work.</li>
+      <li>Email us at <a href="mailto:support@code-cowboys.com">support@code-cowboys.com</a> — include your device model and a short description of what you did and what happened.</li>
+    </ul>
+  </article>
+
+  <Footer />
+</Base>

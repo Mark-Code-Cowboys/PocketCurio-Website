@@ -1,0 +1,163 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/docs.css';
+---
+
+<Base title="FAQ — Pocket Curio" description="Frequently asked questions about Pocket Curio: what it is and isn't, privacy, reading the print on a souvenir, the map, pricing, backups, and platform availability.">
+  <Nav />
+
+  <article class="doc">
+    <div class="doc-header">
+      <div class="section-label">Documentation</div>
+      <h1>Frequently Asked Questions</h1>
+      <p class="lead">Short answers to the questions we hear most. For step-by-step instructions see the <a href="/user-guide/">User Guide</a>; for fixing problems see <a href="/help/">Help</a>.</p>
+    </div>
+
+    <h2>The app</h2>
+
+    <details class="faq">
+      <summary>What is Pocket Curio, in one sentence?</summary>
+      <div class="body">
+        <p>A private journal for your souvenirs — photograph each one, name the place, keep the memory, and watch the map fill in.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Is this an inventory or collectibles-value app?</summary>
+      <div class="body">
+        <p>No. There are no barcodes, no value estimates, no condition grades, and no marketplace. A souvenir in Pocket Curio is a place plus a memory, not stock. If you're cataloguing coins or trading cards for resale, this isn't the tool.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>What kinds of souvenirs does it handle?</summary>
+      <div class="body">
+        <p>Each collection has a kind: keychains, fridge magnets, shot glasses, patches, ornaments, pins, spoons, stickers, postcards — or <em>Something else</em>, where you tell the app what one is called ("snow globe", "thimble", "bell"). The kind only changes the words the app uses; every collection works the same way.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>How does it know the place from a photo?</summary>
+      <div class="body">
+        <p>Most souvenirs have the place printed on them. On-device text recognition reads the print and offers the most likely line as the place, with the other lines one tap away. You check the spelling. Nothing is uploaded — it works in airplane mode.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>I have a whole fridge of magnets. Do I photograph them one by one?</summary>
+      <div class="body">
+        <p>No — scan the shelf. Take one photo of the whole fridge, draw a box around each magnet with your finger, and the app turns every box into its own photo, reads the place off each one, and adds them all at once. See the <a href="/user-guide/#shelf-scan">User Guide</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Does it work offline?</summary>
+      <div class="body">
+        <p>Entirely. Pocket Curio makes no network calls at all — not for reading the print, not for the map, not for anything. The only time data leaves the phone is when <em>you</em> share an export or a backup through the share sheet.</p>
+      </div>
+    </details>
+
+    <h2>Privacy & the map</h2>
+
+    <details class="faq">
+      <summary>Where is my data stored?</summary>
+      <div class="body">
+        <p>In a local database and a private photo folder on your device. There are no accounts, and Code Cowboys never receives, sees, or stores anything you record — we run no servers. See the <a href="/privacy/">Privacy Policy</a>.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Does the app track my location?</summary>
+      <div class="body">
+        <p>No, and it doesn't ask to. Pocket Curio requests no location permission. The map is drawn from the state and country you type on each souvenir.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>How does the map work without location?</summary>
+      <div class="body">
+        <p>Give a souvenir a state and a country and the map lights the matching tiles — a US state map, the seven continents, and a country list with counts. It's a picture of where your collection came from, drawn from what you've typed. Abbreviations and casual spellings ("FL", "usa", "England") are understood.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Are there ads or analytics?</summary>
+      <div class="body">
+        <p>No ads, no analytics, no tracking SDKs, no crash reporters. The app contains no third-party data services of any kind.</p>
+      </div>
+    </details>
+
+    <h2>Pricing</h2>
+
+    <details class="faq">
+      <summary>What's free and what's paid?</summary>
+      <div class="body">
+        <p>Free: one collection and 25 souvenirs, forever — with photos, reading the print, the shelf scan, and memories all included. <strong>Pocket Curio Pro</strong> adds unlimited collections and souvenirs, the map, and backup & CSV export. It's a one-time purchase (<strong>$6.99</strong>) or a monthly subscription (<strong>$1.49/month</strong>); payment is handled by Google Play or the App Store.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Why is the one-time price so low?</summary>
+      <div class="body">
+        <p>It's priced as a gift. The collector in your life probably doesn't buy apps; you can buy this one for them. If you'd rather not commit, the monthly plan gives you the same Pro with no strings.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>What happens when I hit the free limit?</summary>
+      <div class="body">
+        <p>Nothing happens to what you have. Your first collection and every souvenir in it stay viewable and editable forever. Only adding a second collection or a 26th souvenir opens the Pro sheet — and a counter on the shelf ("Room for 3 more") means it never sneaks up on you. Note that the free tally counts what you've ever added, so deleting a souvenir doesn't free up a slot.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>I reinstalled the app — how do I get Pro back?</summary>
+      <div class="body">
+        <p>Purchases are tied to your Google Play or Apple account, not your device. Open the Pro sheet and tap <strong>Restore purchase</strong>. If it doesn't appear, see <a href="/help/">Help</a>.</p>
+      </div>
+    </details>
+
+    <h2>Data & platforms</h2>
+
+    <details class="faq">
+      <summary>How do I back up my collection?</summary>
+      <div class="body">
+        <p>With Pro, <strong>Back up everything</strong> on the Map tab makes a single backup file — photos included — that you share wherever you like: your own cloud drive, an email to yourself, Files. <strong>Restore a backup</strong> works without Pro, so the file always opens on a new phone. Your device's own backup (Google Backup, iCloud) may also include app data according to your settings.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can I get my data out as a spreadsheet?</summary>
+      <div class="body">
+        <p>Yes — <strong>Share souvenirs as CSV</strong> (Pro) exports one row per souvenir with the collection, kind, place, city, state, country, date, occasion, who gave it, rating, notes, and photo filename.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Can several people in the house use it?</summary>
+      <div class="body">
+        <p>On one phone, yes: each collector gets their own collection — "Dad's keychains", "Mom's fridge" — side by side on the Shelves tab. There's no sync between phones (no cloud, by design); a backup file moves a whole collection from one phone to another.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Is there an iPhone version?</summary>
+      <div class="body">
+        <p>Pocket Curio launches on Android first. The iPhone build follows once the Android release settles; <a href="mailto:hello@code-cowboys.com?subject=Pocket%20Curio%20on%20iPhone">email us</a> and we'll let you know the day it's on the App Store.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>How do I get the app today?</summary>
+      <div class="body">
+        <p>Pocket Curio is finishing its first release. <a href="mailto:hello@code-cowboys.com?subject=Tell%20me%20when%20Pocket%20Curio%20launches">Email us</a> and we'll tell you the moment it's on Google Play — or, if you'd like to try it early, ask to join the beta.</p>
+      </div>
+    </details>
+
+    <p class="doc-footer-link">Didn't find your question? Email <a href="mailto:support@code-cowboys.com">support@code-cowboys.com</a>.</p>
+  </article>
+
+  <Footer />
+</Base>

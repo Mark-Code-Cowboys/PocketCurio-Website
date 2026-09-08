@@ -1,0 +1,169 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/docs.css';
+---
+
+<Base title="User Guide — Pocket Curio" description="How to use Pocket Curio: start a collection, photograph a souvenir, let the app read the place off the print, scan a whole shelf at once, keep the memory, and watch the map fill in.">
+  <Nav />
+
+  <article class="doc">
+    <div class="doc-header">
+      <div class="section-label">Documentation</div>
+      <h1>User Guide</h1>
+      <p class="lead">Pocket Curio is two tabs — <strong>Shelves</strong> and <strong>Map</strong> — and one fast way in: the camera. This guide walks through the first launch, collections, adding a souvenir, the whole-shelf scan, the map, backups, and the free tier.</p>
+    </div>
+
+    <div class="toc">
+      <p>On this page</p>
+      <ul>
+        <li><a href="#start">First launch</a></li>
+        <li><a href="#collections">Collections (your shelves)</a></li>
+        <li><a href="#add">Adding a souvenir</a></li>
+        <li><a href="#read">Reading the place off the print</a></li>
+        <li><a href="#memory">The memory</a></li>
+        <li><a href="#shelf-scan">Scanning a whole shelf or fridge</a></li>
+        <li><a href="#browse">Browsing, sorting & editing</a></li>
+        <li><a href="#map">The map (Pro)</a></li>
+        <li><a href="#backup">Backup, restore & CSV export (Pro)</a></li>
+        <li><a href="#pro">Free tier & Pocket Curio Pro</a></li>
+      </ul>
+    </div>
+
+    <h2 id="start">First launch</h2>
+    <p>The first screen asks one question: how do you want to start? Three doors, no wrong answer:</p>
+    <ul>
+      <li><strong>Scan my whole fridge or shelf</strong> — name the collection, then photograph the whole thing and box each souvenir. Best if you already have a wall of magnets.</li>
+      <li><strong>Photograph my first souvenir</strong> — name the collection, then straight to the camera for one item.</li>
+      <li><strong>Just look around</strong> — drop into the Shelves tab and explore.</li>
+    </ul>
+    <p>The welcome screen shows once. Everything it offers is available later from the Shelves tab and the collection's menu.</p>
+
+    <h2 id="collections">Collections (your shelves)</h2>
+    <p>A collection is one shelf: Mom's fridge, Dad's keychains, the spoon rack in the hallway. Tap <strong>New collection</strong> on the Shelves tab and give it:</p>
+    <ol class="steps">
+      <li><strong>A name.</strong> Whatever you'd actually call it — "Fridge magnets", "Dad's keychains".</li>
+      <li><strong>A kind.</strong> Keychains, magnets, shot glasses, patches, ornaments, pins, spoons, stickers, postcards — or <em>Something else</em>, where you type what one is called ("snow globe"). The app then uses that word everywhere: the add button says "Add magnet", the empty shelf says "Photograph your first spoon".</li>
+    </ol>
+    <div class="shot">
+      <img src="/shots/06-collections-home.webp" alt="Shelves tab: two collection tiles, Dad's keychains and Mom's fridge, under a headline of 30 items in 2 collections" class="phone-shot" width="540" height="1200" loading="lazy" />
+      <figcaption>The Shelves tab: one tile per collection, its cover photo, and the running count.</figcaption>
+    </div>
+    <p>Each collection's tile shows a cover photo — the first souvenir by default, or any souvenir you choose with <strong>Use as collection cover</strong> from its detail screen. Rename, change the kind, or delete a collection from the <strong>⋮</strong> menu on its shelf.</p>
+
+    <h2 id="add">Adding a souvenir</h2>
+    <p>Open a collection and tap <strong>Add magnet</strong> (or keychain, or spoon…). The camera opens immediately — the photo is the record, so it comes first:</p>
+    <ol class="steps">
+      <li><strong>Take the photo.</strong> Fill the frame with the souvenir. You can <strong>Retake</strong>, <strong>Crop</strong> to tighten the shot, or <strong>Choose from library</strong> instead.</li>
+      <li><strong>Check the place.</strong> The <strong>Place</strong> field is prefilled with what the app read off the print (see <a href="#read">below</a>). Fix the spelling if it needs it, or type the place yourself.</li>
+      <li><strong>Save.</strong> That's a complete souvenir — photo and place. Everything else is optional and can be added any time from the edit screen.</li>
+    </ol>
+    <div class="shot">
+      <img src="/shots/05-composer.webp" alt="New souvenir: photo of a Key West magnet, Place prefilled with KEY WEST, and an 'Also read' chip for FLORIDA MILE 0" class="phone-shot" width="540" height="1200" loading="lazy" />
+      <figcaption>Photo, place, save. Under ten seconds.</figcaption>
+    </div>
+    <div class="tip">
+      <strong>Two fields is the whole first step</strong>
+      <p>The composer is built so you can add a souvenir while it's still in your hand at the gift shop. The memory can come later, when it comes back to you.</p>
+    </div>
+
+    <h2 id="read">Reading the place off the print</h2>
+    <p>Most souvenirs have the place printed right on them. When the photo lands, Pocket Curio runs on-device text recognition over it and:</p>
+    <ul>
+      <li>puts the most likely line in the <strong>Place</strong> field with the note <em>"Read from the photo — check the spelling"</em>;</li>
+      <li>shows the other lines it read as <strong>Also read</strong> chips — tap one to use it instead ("FLORIDA · MILE 0" when the big text was "KEY WEST").</li>
+    </ul>
+    <p>Start typing and the note clears — your spelling wins. Recognition runs entirely on your phone: no image or text is uploaded, and it works in airplane mode. Handwritten script and non-Latin alphabets aren't supported by the recognizer.</p>
+
+    <h2 id="memory">The memory</h2>
+    <p>Tap <strong>Add the memory</strong> on the composer (or <strong>Edit</strong> on any souvenir) to unfold the rest:</p>
+    <ul>
+      <li><strong>City, State, Country</strong> — the state and country are what light up the <a href="#map">map</a>. "Florida", "FL", "usa", "England" are all understood.</li>
+      <li><strong>When</strong> — the date you got it. Feeds "Souvenirs by year" and "The oldest" on the map.</li>
+      <li><strong>Trip or occasion</strong> — "Honeymoon", "the 2019 road trip".</li>
+      <li><strong>Who gave it to you?</strong> — leave blank if you picked it up yourself.</li>
+      <li><strong>How much do you love it?</strong> — one to five stars.</li>
+      <li><strong>The memory</strong> — what happened that day, in your own words.</li>
+    </ul>
+    <div class="shot">
+      <img src="/shots/04-memory.webp" alt="Souvenir detail for Yellowstone: five stars, July 3 2016, Fortieth anniversary, and the memory 'Old Faithful went off right on time'" class="phone-shot" width="540" height="1200" loading="lazy" />
+      <figcaption>The detail screen: the photo, the place, and the story.</figcaption>
+    </div>
+
+    <h2 id="shelf-scan">Scanning a whole shelf or fridge</h2>
+    <p>Already have forty magnets on the fridge? Don't photograph them one at a time. On the collection's shelf, tap the scan icon (or <strong>Already have a shelf full? Scan it</strong> on an empty shelf) and choose <strong>Take a photo of the shelf</strong> or <strong>Choose a photo</strong>:</p>
+    <ol class="steps">
+      <li><strong>Box each souvenir.</strong> On the <em>Box each souvenir</em> screen, drag a box around each one with your finger. Tap a box to remove it. Take your time — the boxes are the crops.</li>
+      <li><strong>Check what was read.</strong> Every box becomes its own photo, and the app reads the place off each one. The review grid shows the crops with their place names — fix any spelling right there, type in the ones it couldn't read, and untick any box that wasn't a souvenir.</li>
+      <li><strong>Add them all.</strong> One tap adds every crop as its own souvenir. Fill in memories later, one at a time, as they come back to you.</li>
+    </ol>
+    <div class="shot">
+      <img src="/shots/07-shelf-review.webp" alt="Check what was read: a grid of cropped magnet photos, each with the place name read from it" class="phone-shot" width="540" height="1200" loading="lazy" />
+      <figcaption>The review grid: six crops, six place names, one tap to add them all.</figcaption>
+    </div>
+    <div class="note">
+      <strong>Backing out is clean</strong>
+      <p>Leave the scan at any step before the final add and nothing is saved — no rows, no stray photos.</p>
+    </div>
+
+    <h2 id="browse">Browsing, sorting & editing</h2>
+    <p>A collection's shelf is a photo grid, each tile labelled with its place. Switch the sort between <strong>Date</strong> and <strong>Place</strong> at the top. Tap any tile for the detail screen, where you can:</p>
+    <ul>
+      <li><strong>Edit</strong> anything — photo, place, date, memory, rating.</li>
+      <li><strong>Use as collection cover</strong> to put this souvenir on the collection's tile.</li>
+      <li><strong>Remove</strong> the souvenir (after a confirmation). Its photo is deleted with it.</li>
+    </ul>
+    <div class="shot">
+      <img src="/shots/00-fridge-magnets.webp" alt="Fridge Magnets: a four-column photo grid of real magnets sorted by date, each tile labelled with its place" class="phone-shot" width="540" height="1200" loading="lazy" />
+      <figcaption>The shelf itself, sorted by date — twenty magnets, twenty places.</figcaption>
+    </div>
+
+    <h2 id="map">The map <span class="premium-mark">Pro</span></h2>
+    <p>The <strong>Map</strong> tab is where the collection becomes a travel record. It's drawn entirely from the states and countries you've typed — no location permission, no network:</p>
+    <ul>
+      <li><strong>So far</strong> — souvenirs, countries, and states & provinces, at a glance.</li>
+      <li><strong>The world</strong> — seven continent tiles that light up as you add a country on each.</li>
+      <li><strong>The States</strong> — a tile map of the US; each state fills in with its first souvenir.</li>
+      <li><strong>Countries</strong> — every country with its count.</li>
+      <li><strong>Souvenirs by year</strong> and <strong>The oldest</strong> — from the dates you've entered.</li>
+    </ul>
+    <div class="shot">
+      <img src="/shots/02-map.webp" alt="The map: North America and Europe lit, thirteen US states filled, and country chips for the United States, Ireland, Canada, and Mexico" class="phone-shot" width="540" height="1200" loading="lazy" />
+      <figcaption>Thirteen states, four countries, and the continents they sit on.</figcaption>
+    </div>
+
+    <h2 id="backup">Backup, restore & CSV export <span class="premium-mark">Pro</span></h2>
+    <p>At the bottom of the Map tab, under <strong>Yours to keep</strong>:</p>
+    <ul>
+      <li><strong>Share souvenirs as CSV</strong> — one row per souvenir (collection, kind, place, city, state, country, date, occasion, who gave it, rating, notes, photo filename), sent through the share sheet to wherever you like.</li>
+      <li><strong>Back up everything</strong> — a single backup file with every collection, souvenir, and photo. Share it to your own cloud drive, email it to yourself, or save it to Files.</li>
+      <li><strong>Restore a backup</strong> — pick a backup file and the app restores it. Restore is available without Pro, so a backup made on one phone always opens on the next.</li>
+    </ul>
+    <div class="warn">
+      <strong>Restore replaces</strong>
+      <p>Restoring replaces everything on the phone with the contents of the backup — every collection, souvenir, and photo. The app asks before doing it.</p>
+    </div>
+
+    <h2 id="pro">Free tier & Pocket Curio Pro</h2>
+    <p>Your first collection and your first <strong>25 souvenirs</strong> are free, always. A counter on the shelf tells you where you stand — "Room for 3 more — then Pocket Curio Pro." Nothing you've photographed is ever locked away; only the <em>second</em> collection or the <em>26th</em> souvenir opens the Pro sheet.</p>
+    <p><strong>Pocket Curio Pro</strong> is the whole shelf: unlimited collections and souvenirs, the map, and backup & CSV export. Two ways to get it:</p>
+    <ul>
+      <li><strong>Yours forever</strong> — one purchase, no subscription. It makes a good gift.</li>
+      <li><strong>Month to month</strong> — a monthly subscription, cancel any time through the store.</li>
+    </ul>
+    <ul>
+      <li>The free tally counts what you've <em>ever</em> added, so deleting a souvenir doesn't hand the slot back.</li>
+      <li>Payment is handled entirely by Google Play or the App Store; we never see your payment details.</li>
+      <li>Reinstalled? <strong>Restore purchase</strong> on the Pro sheet brings it back through the store.</li>
+    </ul>
+
+    <p class="doc-footer-link">Questions this guide didn't answer? Check the <a href="/faq/">FAQ</a> or the <a href="/help/">Help & Troubleshooting</a> page.</p>
+  </article>
+
+  <Footer />
+</Base>
+
+<style>
+  .doc .shot img.phone-shot { max-width: 280px; border-radius: 28px; }
+</style>

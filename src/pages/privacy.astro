@@ -1,0 +1,173 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Privacy Policy — Pocket Curio" description="Pocket Curio privacy policy. Everything you record stays on your device — no accounts, no analytics, no network calls, and no location permission.">
+  <Nav />
+
+  <section class="policy inner">
+    <div class="policy-header">
+      <div class="section-label">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective Date: September 8, 2026 · Publisher: Code Cowboys LLC</p>
+    </div>
+
+    <div class="policy-body">
+
+      <h2>Overview</h2>
+      <p>Pocket Curio is a personal journal of souvenirs and the places they came from, developed and published by Code Cowboys LLC, a Michigan-based software studio. Our privacy policy is short because the app is built so that we <em>cannot</em> see your data.</p>
+      <p>Everything you record in Pocket Curio — photos, places, dates, who gave you what, the memories — is stored <strong>only on your device</strong>. Pocket Curio has no accounts, no analytics, no advertising, and makes no network calls. We do not collect, transmit, store, sell, or share any personal data. We could not hand your collection to anyone even if asked, because we never have it.</p>
+
+      <h2>Information We Do Not Collect</h2>
+      <p>We do not collect:</p>
+      <ul>
+        <li>Personal identification information (name, email, address, phone number)</li>
+        <li>The photos, places, dates, ratings, names, or memories you record</li>
+        <li>Device identifiers or advertising identifiers</li>
+        <li>Location data of any kind</li>
+        <li>Usage analytics or crash reports</li>
+        <li>Any other data of any kind</li>
+      </ul>
+
+      <h2>Camera and Photos</h2>
+      <p>Camera and photo-library access is used only when you photograph a souvenir or a shelf of them. The photos you take are stored locally, in the app's own private storage, with the rest of your collection and are never uploaded — there is nowhere to upload them to.</p>
+
+      <h2>Reading the Print on a Souvenir</h2>
+      <p>When you photograph a souvenir, Pocket Curio reads the text printed on it <strong>on your device</strong> (Google ML Kit's bundled, offline text recognition) and offers it as the place name for you to check. The photo and everything read from it stay on your phone. Text recognition works with no network connection at all.</p>
+
+      <h2>Location</h2>
+      <p>Pocket Curio requests <strong>no location permission</strong>. The map is drawn from the state and country you type; a souvenir's coordinates exist only if you enter them yourself, and are stored locally like everything else.</p>
+
+      <h2>How Your Data Is Stored</h2>
+      <p>All data you enter into Pocket Curio is stored locally on your device. This data:</p>
+      <ul>
+        <li>Never leaves your device unless you export or back it up yourself (see below)</li>
+        <li>Is never transmitted to Code Cowboys — we operate no servers</li>
+        <li>Is not accessible to Code Cowboys LLC or any other party</li>
+      </ul>
+      <p>If you use your device's built-in backup features (such as Google Backup or iCloud), your app data may be included in those backups according to your device settings and the policies of those services. We have no control over or access to those backups.</p>
+
+      <h2>Sharing, Export, and Backup</h2>
+      <p>The CSV export and the backup file are created only when you tap the button, and go only where you send them via your phone's share sheet — your own cloud drive, an email to yourself, a message to a family member. Restoring a backup reads a file you choose. We are never in that path.</p>
+
+      <h2>Third-Party Services</h2>
+      <p>Pocket Curio does not integrate any third-party analytics, advertising, crash reporting, or data collection services. We do not use:</p>
+      <ul>
+        <li>Google Analytics or Firebase</li>
+        <li>Meta (Facebook) SDKs</li>
+        <li>Advertising networks</li>
+        <li>Crash reporting tools</li>
+        <li>Any other third-party data services</li>
+      </ul>
+      <p>The on-device text recognition library ships inside the app and does not contact any server.</p>
+
+      <h2>Purchases</h2>
+      <p>Pocket Curio Pro is sold through Google Play and the Apple App Store. The stores process payment and tell the app only "this purchase is owned." We receive no payment details and keep no purchase records of our own.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>Pocket Curio does not knowingly collect data from anyone — including children under the age of 13 — because it collects no data at all.</p>
+
+      <h2>Data Deletion</h2>
+      <p>Because we do not collect or store any of your data, there is nothing for us to delete on our end. Deleting the app deletes all of its data:</p>
+      <ul>
+        <li><strong>Android:</strong> Delete the app from your device, or go to Settings → Apps → Pocket Curio → Clear Data.</li>
+        <li><strong>iOS:</strong> Delete the app from your device. All associated data is removed automatically.</li>
+      </ul>
+      <p>Make a backup first if you want to keep your collection; we have no copy to restore for you (that is the point).</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>If a future version ever changes what leaves your device, this policy and its effective date will change with it, and the app will say so before anything new happens. Any such feature would be opt-in and clearly labeled — it will never change silently.</p>
+
+      <h2>Contact</h2>
+      <p>If you have questions about this Privacy Policy, please contact us:</p>
+      <p><strong>Code Cowboys LLC</strong><br>
+      Email: <a href="mailto:privacy@code-cowboys.com">privacy@code-cowboys.com</a><br>
+      Website: <a href="https://code-cowboys.com">code-cowboys.com</a></p>
+
+      <p class="policy-footer-note">This privacy policy applies to the Pocket Curio mobile application. The Code Cowboys LLC studio-wide policy is at <a href="https://code-cowboys.com/privacy/">code-cowboys.com/privacy</a>.</p>
+
+    </div>
+  </section>
+
+  <Footer />
+</Base>
+
+<style>
+  .policy {
+    padding: 70px 40px;
+    max-width: 720px;
+  }
+
+  .policy-header {
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .policy-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 12px;
+    line-height: 1.05;
+  }
+
+  .meta {
+    font-size: 13px;
+    color: var(--text-faint);
+    font-weight: 300;
+  }
+
+  .policy-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 40px;
+    margin-bottom: 14px;
+  }
+
+  .policy-body p {
+    font-size: 15px;
+    color: var(--text-dim);
+    line-height: 1.75;
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+
+  .policy-body ul {
+    margin: 0 0 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .policy-body li {
+    font-size: 15px;
+    color: var(--text-dim);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .policy-body strong { color: var(--text-muted); font-weight: 500; }
+
+  .policy-body a { color: var(--curio); }
+  .policy-body a:hover { opacity: 0.8; }
+
+  .policy-footer-note {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-faint);
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .policy { padding: 50px 20px; }
+    .policy-header h1 { font-size: 36px; }
+  }
+</style>
