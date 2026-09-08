@@ -73,7 +73,7 @@ dashboard (Workers & Pages → Create → import repository) with build command
 npm run build && npx wrangler deploy
 ```
 
-Then add the custom domain `mypocketcurio.app` to the Worker. The production
+Then add the custom domain `pocketcurio.app` to the Worker. The production
 domain is set in `astro.config.mjs` (`site:`); `public/_redirects` handles
 the `/privacy-policy` → `/privacy/` redirect.
 
