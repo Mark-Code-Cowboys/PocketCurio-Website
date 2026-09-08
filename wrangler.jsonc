@@ -1,6 +1,6 @@
 {
   // Static-assets-only Worker: no server code, wrangler deploy just uploads dist/.
-  "name": "pocket-curio-website",
+  "name": "pocketcurio-website",
   "compatibility_date": "2026-08-17",
   "assets": {
     "directory": "./dist",
